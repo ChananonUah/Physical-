@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    
+}
+
+header{
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.head-top{
+    background-color: rgb(250, 167, 12);
+    min-width: 800px;
+}
+
+.head-top h2{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+}
+
+.box{
+    box-shadow: 10px 10px 20px 6px rgba(0, 0, 0, 1.5);
+    border-radius: 15px;
+    padding: 10px;
+    margin: auto;
+    
+}
+
+.box{
+    width: 800px;
+    margin-top: 2rem;
+}
+
+.box h2{
+    font-family: "Kanit", sans-serif;
+}
+
+.in{
+    width: 50px;
+    border-radius: 5px;
+}
+
+.result{
+    color: white;
+    background-image: linear-gradient(90deg, rgb(35, 50, 77) 20%, rgba(0, 0, 0, 1) 89%);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.box p{
+    margin-top: 20px;
+}
+
+.box button{
+    margin-top: 15px;
+}
+
+.re{
+    padding: 5px;
+    font-size: 10px;
+    width: max-content;
+    border-radius: 5px;
+    background-color: #324362;
+    color: white;
+    transition-duration: 0.4s;
+}
+
+.ae{
+    background-image: linear-gradient(90deg, rgba(218, 73, 55, 1) 0%, rgba(255, 223, 30, 1) 62%);
+    color: black;
+    transition-duration: 0.4s;
+}
+
+#v1{
+    display: none;
+}
+
+#s1{
+    display: none;
+}
+
+#t1{
+    display: none;
+}
+
+.button-1{
+    background-image: linear-gradient(90deg, rgb(132, 250, 102) 0%, rgba(255, 223, 30, 1) 62%);
+    color: black;
+    transition-duration: 0.4s;
+    padding: 5px;
+}
+
+
+@media screen and (max-width: 1000px) and (min-width: 500px){
+    
+}
+
