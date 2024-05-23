@@ -34,15 +34,15 @@ function showmessage() {
 
 
     if (numbers >=1 && numberv >=1){
-        outputhtml += numberv/numbers;
+        outputhtml += numbers/numberv;
         
     }
     else if (numbers >=1 && numbert >=1){
-        outputhtml += numbers*numbert;
+        outputhtml += numbers/numbert;
         
     }
     else{
-        outputhtml += numberv/numbert;
+        outputhtml += numberv*numbert;
     }
 
     message.innerHTML = outputhtml;
