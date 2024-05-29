@@ -128,9 +128,12 @@ function result_1() {
     unit_need = unit_array[1].substring(0, unit_array[1].length - 1);
     
     for (const key in unit_all) {
-        if (key == unit_need || key == unit_ans) {
-            ans = parseInt(unit_array[0])*unit_all[key]
+        if (key == unit_need) {
+            ans = parseInt(unit_array[0])*(-unit_all[key])
         }    
+        if (key == unit_ans) {
+            ans = parseInt(unit_array[0])*(unit_all[key])
+        }
     }
     
     function formatExponent(num) {
