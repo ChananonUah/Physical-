@@ -148,8 +148,12 @@ function result_1() {
     
         return [parseFloat(base), exponent];
     }
+
+    function roundToTwoDecimalPlaces(number) {
+    return Math.round(number * 100) / 100;
+}
     
-    message_1.innerHTML = `<p>หน่วยที่ได้ ${formatExponent(ans)[0]}× 10<sup>${formatExponent(ans)[1]}</sup> ${unit_ans}</p>`;
+    message_1.innerHTML = `<p>หน่วยที่ได้ ${function roundToTwoDecimalPlaces(formatExponent(ans)[0])}× 10<sup>${formatExponent(ans)[1]}</sup> ${unit_ans}</p>`;
 }
 
 
