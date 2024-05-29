@@ -126,14 +126,15 @@ function result_1() {
     unit_array = unit_input.split(" ");
     
     unit_need = unit_array[1].substring(0, unit_array[1].length - 1);
-    unit_ans1 = unit_ans.substring(0, unit_ans.length - 1);
-    
+    let unit_ans1 = unit_ans.substring(0, unit_ans.length - 1);
+    let ans = parseInt(unit_array[0])
+
     for (const key in unit_all) {
         if (key == unit_need) {
-            ans = parseInt(unit_array[0])*(1/unit_all[key])
+            ans = ans*(1/unit_all[key])
         }    
-        if (key == unit_ans) {
-            ans = parseInt(unit_array[0])*(unit_all[key])
+        if (key == unit_ans1) {
+            ans = ans*(unit_all[key])
         }
     }
     
@@ -161,5 +162,6 @@ function result_1() {
 
 
 function reset_1(){
-    document.getElementById('defult-1').value ="";
+    document.getElementById('change1').value ="";
+    document.getElementById('change2').value ="";
 }
