@@ -126,7 +126,7 @@ function result_1() {
     unit_array = unit_input.split(" ");
     
     unit_need = unit_array[1].substring(0, unit_array[1].length - 1);
-    unit_ans = unit_ans.substring(0, unit_ans[1].length - 1);
+    unit_ans = unit_ans.substring(0, unit_ans.length - 1);
     
     for (const key in unit_all) {
         if (key == unit_need) {
