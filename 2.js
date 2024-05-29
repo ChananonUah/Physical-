@@ -153,7 +153,7 @@ function result_1() {
     return Math.round(number * 100) / 100;
 }
     
-    message_1.innerHTML = `<p>หน่วยที่ได้ ${function roundToTwoDecimalPlaces(formatExponent(ans)[0])}× 10<sup>${formatExponent(ans)[1]}</sup> ${unit_ans}</p>`;
+    message_1.innerHTML = `<p>หน่วยที่ได้ ${roundToTwoDecimalPlaces(formatExponent(ans)[0])}× 10<sup>${formatExponent(ans)[1]}</sup> ${unit_ans}</p>`;
 }
 
 
