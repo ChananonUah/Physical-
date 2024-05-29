@@ -1,134 +1,157 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="pro.css".css">
+let nums = document.getElementById('se');
+let numv = document.getElementById('ve');
+let numt = document.getElementById('te');
+let v = document.getElementById('v1');
+let t = document.getElementById('t1');
+let s = document.getElementById('s1');
+let message = document.getElementById('result');
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
-   
-   <header>
-        <div class="head-top">
-            <h2>Physics</h2>
-        </div>
 
-        <div class="boxbig">
-            <div class="box box-1">
-                <h2>อัตราเร็วเเละความเร็ว</h2>
-                <p id="v1">
-                   <span>v</span>
-                   <span><input type="number" class="in v" id="ve">หน่วย m/s</span>
-                </p>
-    
-                <p id="s1">
-                    <span>s</span>
-                    <span><input type="number" class="in s" id="se">หน่วย m</span>
-                </p>
-    
-                <p id="t1">
-                    <span>t</span>
-                    <span><input type="number" class="in a" id="te">หน่วย s</span>
-                </p>
-    
-                <button onclick="finds();" class="button-1" id="but1">หา s</button>
-                <button onclick="findv()"  class="button-1" id="but2">หา v</button>
-                <button onclick="findt()"  class="button-1" id="but3">หา t</button>
-    
-    
-                <button class="re ae" onclick="showmessage();">Result</button>
-                <button id="reset" class="reset" onclick="reset_one();" value="Reset">Reset</button>
-    
-                <p class="result" id="result" >เเสดงคำตอบที่นี่</p>
-    
-    
-            </div>
-        </div>
 
-        <div class="boxbig">
-            <div class="box box-2">
-                <h2 class="h-2">เเปลงหน่วย</h2>
-                
-                <p>
-                    <p>ตัวเลขพร้อมหน่วย</p>
-                    <input type="text" placeholder="ตัวอย่าง 200 cm" id="change1">
-                </p>
 
-                <p>
-                    <p>หน่วยที่จะเปลี่ยน</p>
-                    <input type="text" placeholder="ตัวอย่าง mm" id="change2">
-                </p>
-                
-                        
-                <button class="re ae" onclick=" result_1();">Result</button>
-                <button class="reset" onclick="reset_1();">Reset</button>
-    
-                <p class="result" id="result-1">เเสดงคำตอบที่นี่</p>
-    
-            </div>
-        </div>
+function finds(){
+    v.style.display = 'block';
+    t.style.display = 'block';
+    document.getElementById('but2').style.display = 'none';
+    document.getElementById('but3').style.display = 'none';
+    document.getElementById('but1').style.display = 'none';
 
-        <div class="boxbig">
-            <div class="box box-3">
-                <h2>การเคลื่อนที่เส้นตรง</h2>
 
-                <p style="display: none;" id="sr">
-                    s=
-                    <input type="number" id="sre" >m
-                </p>
-                <p style="display: none;" id="vr">
-                    v=
-                    <input type="number" id="vre">m/s
-                </p>
-                <p style="display: none;" id="ur">
-                    u=
-                    <input type="number" id="ure">m/s
-                </p>
-                <p style="display: none;" id="ar">
-                    a=
-                    <input type="number" id="are">m/s<sup>2</sup>
-                </p>
-                <p style="display: none;" id="tr">
-                    t=
-                    <input type="number" id="tre">s
-                </p>
+}
 
-                <button class="button-1" onclick="nos();" id="but-1">หาs</button>
-                <button class="button-1" onclick="nov();" id="but-2">หาv</button>
-                <button class="button-1" onclick="nou();" id="but-3">หาu</button>
-                <button class="button-1" onclick="noa();" id="but-4">หาa</button>
-                <button class="button-1" onclick="not();" id="but-5">หาt</button>
-            
-                <button class="re ae" id="results" style="display: none;" onclick="findse();">Result</button>
-                <button class="re ae" id="resultv" style="display: none;" onclick="findve();">Result</button>
-                <button class="re ae" id="resultu" style="display: none;" onclick="findue();">Result</button>
-                <button class="re ae" id="resulta" style="display: none;" onclick="findae();">Result</button>
-                <button class="re ae" id="resultt" style="display: none;" onclick="findte();">Result</button>
-            
-                <button class="reset" onclick="reset_2();"  value="Reset">Reset</button>
+function findv(){
+    s.style.display = 'block';
+    t.style.display = 'block';
+    document.getElementById('but2').style.display = 'none';
+    document.getElementById('but3').style.display = 'none';
+    document.getElementById('but1').style.display = 'none';
 
-                <p class="result" id="resulttwo">เเสดงคำตอบที่นี่</p>
-            </div>
-        </div>
+
+}
+function findt(){
+    s.style.display = 'block';
+    v.style.display = 'block';
+    document.getElementById('but2').style.display = 'none';
+    document.getElementById('but3').style.display = 'none';
+    document.getElementById('but1').style.display = 'none';
+
+
+}
+
+function showmessage() {
+    let numbers = Number(nums.value);
+    let numberv = Number(numv.value);
+    let numbert = Number(numt.value);
+    let outputhtml = ''
+
+
+    if (numbers >=1 && numberv >=1){
+        outputhtml += 't = '
+        outputhtml += numbers/numberv;
+        outputhtml += 's'
+
+        if (outputhtml < 0){
+            outputhtml = 'หาค่าไม่ได้'
+        }
         
-        
-   </header>
+    }
+    else if (numbers >=1 && numbert >=1){
+        outputhtml += 'v = '
+        outputhtml += numbers/numbert;
+        outputhtml += 'm/s'
+        if (outputhtml < 0){
+            outputhtml = 'หาค่าไม่ได้'
+         }
+    }
+    else if(numberv >=1 && numbert >=1){
+        outputhtml += 's = '
+        outputhtml += numberv*numbert;
+        outputhtml += 'm'
+        if (outputhtml < 0){
+            outputhtml = 'หาค่าไม่ได้'
+         }
+    }
+    else{
+        outputhtml = 'หาค่าไม่ได้'
+    }
+
+    message.innerHTML = outputhtml;
+
+}
+
+function reset_one() {
+    document.getElementById('ve').value = "";
+    document.getElementById('se').value = "";
+    document.getElementById('te').value = "";
+    outputhtml = "เเสดงคำตอบที่นี่"
+    message.innerHTML = outputhtml;
+    s.style.display = 'none';
+    v.style.display = 'none';
+    t.style.display = 'none';
+
+    document.getElementById('but2').style.display = 'inline-block';
+    document.getElementById('but1').style.display = 'inline-block';
+    document.getElementById('but3').style.display = 'inline-block';
 
 
-    
+}
 
 
 
 
 
 
-    <script src="2.js"></script>
-</body>
-</html>
+
+
+
+
+
+
+
+
+let message_1 = document.getElementById('result-1');
+
+unit_all = {'p':10**-12, 'n':10**-9, 'mi':10**-6,
+            'm':10**-3, 'c':10**-2, 'd':10**-1,
+            'da':10**1, 'h':10**2, 'k':10**3, 
+            'M':10**6, 'G':10**9, 'T':10**12, 
+            }
+
+// ตัวอย่าง 10 nm 10 cm
+// ถ้าเป็น micro ให้ใส่เป็น mi
+let unit_input = document.getElementById('change1').value;
+let unit_ans = document.getElementById('change2').value;
+
+unit_array = unit_input.split(" ");
+
+unit_need = unit_array[1].substring(0, unit_array[1].length - 1);
+
+for (const key in unit_all) {
+    if (key == unit_need || key == unit_ans) {
+        ans = parseInt(unit_array[0])*unit_all[key]
+    }    
+}
+
+function formatExponent(num) {
+    // แปลงเลขเป็นสตริงในรูปแบบเลขยกกำลังฐาน 10
+    let exponentString = num.toExponential();
+
+    // แยกส่วนฐานและเลขชี้กำลัง
+    let [base, exponent] = exponentString.split('e');
+
+    // แปลงเลขชี้กำลังเป็นจำนวนเต็ม
+    exponent = parseInt(exponent, 10);
+
+    return [parseFloat(base), exponent];
+}
+
+
+message_1.innerHTML = <p><p>หน่วยที่ได้ ${formatExponent(ans)[0]}× 10<sup>${formatExponent(ans)[1]}</sup> ${unit_ans}</p></p>;
+
+
+
+
+
+function reset_1(){
+    document.getElementById('defult-1').value ="";
+}
