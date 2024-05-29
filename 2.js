@@ -111,7 +111,7 @@ function reset_one() {
 
 let message_1 = document.getElementById('result-1');
 
-unit_all = {'p':10**-12, 'n':10**-9, 'mi':10**-6,
+const unit_all = {'p':10**-12, 'n':10**-9, 'mi':10**-6,
             'm':10**-3, 'c':10**-2, 'd':10**-1,
             'da':10**1, 'h':10**2, 'k':10**3, 
             'M':10**6, 'G':10**9, 'T':10**12, 
@@ -119,35 +119,36 @@ unit_all = {'p':10**-12, 'n':10**-9, 'mi':10**-6,
 
 // ตัวอย่าง 10 nm 10 cm
 // ถ้าเป็น micro ให้ใส่เป็น mi
-let unit_input = document.getElementById('change1').value;
-let unit_ans = document.getElementById('change2').value;
-
-unit_array = unit_input.split(" ");
-
-unit_need = unit_array[1].substring(0, unit_array[1].length - 1);
-
-for (const key in unit_all) {
-    if (key == unit_need || key == unit_ans) {
-        ans = parseInt(unit_array[0])*unit_all[key]
-    }    
+fuction result_1() {
+    let unit_input = document.getElementById('change1').value;
+    let unit_ans = document.getElementById('change2').value;
+    
+    unit_array = unit_input.split(" ");
+    
+    unit_need = unit_array[1].substring(0, unit_array[1].length - 1);
+    
+    for (const key in unit_all) {
+        if (key == unit_need || key == unit_ans) {
+            ans = parseInt(unit_array[0])*unit_all[key]
+        }    
+    }
+    
+    function formatExponent(num) {
+        // แปลงเลขเป็นสตริงในรูปแบบเลขยกกำลังฐาน 10
+        let exponentString = num.toExponential();
+    
+        // แยกส่วนฐานและเลขชี้กำลัง
+        let [base, exponent] = exponentString.split('e');
+    
+        // แปลงเลขชี้กำลังเป็นจำนวนเต็ม
+        exponent = parseInt(exponent, 10);
+    
+        return [parseFloat(base), exponent];
+    }
+    
+    
+    message_1.innerHTML = <p><p>หน่วยที่ได้ ${formatExponent(ans)[0]}× 10<sup>${formatExponent(ans)[1]}</sup> ${unit_ans}</p></p>;
 }
-
-function formatExponent(num) {
-    // แปลงเลขเป็นสตริงในรูปแบบเลขยกกำลังฐาน 10
-    let exponentString = num.toExponential();
-
-    // แยกส่วนฐานและเลขชี้กำลัง
-    let [base, exponent] = exponentString.split('e');
-
-    // แปลงเลขชี้กำลังเป็นจำนวนเต็ม
-    exponent = parseInt(exponent, 10);
-
-    return [parseFloat(base), exponent];
-}
-
-
-message_1.innerHTML = <p><p>หน่วยที่ได้ ${formatExponent(ans)[0]}× 10<sup>${formatExponent(ans)[1]}</sup> ${unit_ans}</p></p>;
-
 
 
 
