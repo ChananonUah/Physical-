@@ -29,21 +29,35 @@ header{
     border-radius: 15px;
     padding: 10px;
     margin: auto;
+    background-color: #ffdeb2;
+    text-align: left;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding: 40px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    border-radius: 35px;
+    color: #000;
+    width: 700px;
+    max-width: 800px;
     
 }
 
-.box{
-    width: 800px;
-    margin-top: 2rem;
+.box-1{
+    text-align: left;
 }
+
+
 
 .box h2{
     font-family: "Kanit", sans-serif;
 }
 
 .in{
-    width: 50px;
+    
+    width: 150px;
     border-radius: 5px;
+
 }
 
 .result{
@@ -75,13 +89,18 @@ header{
     background-image: linear-gradient(90deg, rgba(218, 73, 55, 1) 0%, rgba(255, 223, 30, 1) 62%);
     color: black;
     transition-duration: 0.4s;
+    padding: 8px;
+    font-size: .7rem;
 }
 
 #v1{
+    
     display: none;
+   
 }
 
 #s1{
+    
     display: none;
 }
 
@@ -94,10 +113,38 @@ header{
     color: black;
     transition-duration: 0.4s;
     padding: 5px;
+    border-radius: 5px;
+}
+
+.reset{
+    background-image: linear-gradient(90deg, rgba(135, 161, 248, 0.966) 0%, rgb(248, 123, 123) 62%);
+    color: black;
+    transition-duration: 0.4s;
+    padding: 5px;
+    border-radius: 15px;
 }
 
 
-@media screen and (max-width: 1000px) and (min-width: 500px){
-    
+@media only screen and (max-width: 750px){
+    .head-top{
+        background-color: rgb(250, 167, 12);
+        min-width: 800px;
+    }
+
+    .boxbig{
+        min-width: 800px;
+    }
+    .box{
+        margin: auto;
+        margin-top: 4rem;
+        margin-bottom: 5rem;
+    }
+
+
+
+   
 }
 
+button{
+    margin: 5px;
+}
