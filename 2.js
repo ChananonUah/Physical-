@@ -146,7 +146,7 @@ fuction result_1() {
         return [parseFloat(base), exponent];
     }
     
-    
+    console.log('aa')
     message_1.innerHTML = <p><p>หน่วยที่ได้ ${formatExponent(ans)[0]}× 10<sup>${formatExponent(ans)[1]}</sup> ${unit_ans}</p></p>;
 }
 
