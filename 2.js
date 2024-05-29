@@ -119,7 +119,7 @@ const unit_all = {'p':10**-12, 'n':10**-9, 'mi':10**-6,
 
 // ตัวอย่าง 10 nm 10 cm
 // ถ้าเป็น micro ให้ใส่เป็น mi
-fuction result_1() {
+function result_1() {
     let unit_input = document.getElementById('change1').value;
     let unit_ans = document.getElementById('change2').value;
     
