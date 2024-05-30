@@ -40,7 +40,7 @@ function showmessage() {
     if (numbers >=1 && numberv >=1){
         outputhtml += 't = '
         outputhtml += numbers/numberv;
-        outputhtml += 's'
+        outputhtml += ' s'
 
         if (outputhtml < 0){
             outputhtml = 'หาค่าไม่ได้'
@@ -50,7 +50,7 @@ function showmessage() {
     else if (numbers >=1 && numbert >=1){
         outputhtml += 'v = '
         outputhtml += numbers/numbert;
-        outputhtml += 'm/s'
+        outputhtml += ' m/s'
         if (outputhtml < 0){
             outputhtml = 'หาค่าไม่ได้'
          }
@@ -58,7 +58,7 @@ function showmessage() {
     else if(numberv >=1 && numbert >=1){
         outputhtml += 's = '
         outputhtml += numberv*numbert;
-        outputhtml += 'm'
+        outputhtml += ' m'
         if (outputhtml < 0){
             outputhtml = 'หาค่าไม่ได้'
          }
@@ -196,7 +196,7 @@ function findse(){
             outputhtml_2 += "s = ";
             outputhtml_2 += (urv*trv) + (1/2*arv*(trv**2));
         }
-        outputhtml_2 += "m"
+        outputhtml_2 += " m"
         
     }
     message_2.innerHTML = outputhtml_2;
@@ -237,7 +237,7 @@ function findve(){
             outputhtml_2 += "v = ";
             outputhtml_2 += urv + (arv * trv);
         }
-        outputhtml_2 += "m/s"
+        outputhtml_2 += " m/s"
         
     }
     message_2.innerHTML = outputhtml_2;
