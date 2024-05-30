@@ -327,12 +327,3 @@ function findue(){
     message_2.innerHTML = outputhtml_2;
 }
 
-function findae(){
-    let outputhtml_2 = "";
-    let message_2 = document.getElementById("resulttwo");
-
-    
-    let srv = parseFloat(document.getElementById("sre").value);
-    let vr
-
-
