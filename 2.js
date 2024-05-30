@@ -94,6 +94,36 @@ function reset_one() {
     document.getElementById('but3').style.display = 'inline-block';
 
 
+}
+
+
+
+
+
+
+let message_1 = document.getElementById('result-1');
+
+
+function result_1(){
+    let defult = document.getElementById('defult-1');
+    let number = Number(defult.value);
+    let length_1 = number.toString().length;
+    message_1.innerHTML = length_1;
+    
+
+
+}
+
+function reset_1(){
+    document.getElementById('defult-1').value ="";
+}
+
+
+
+
+
+
+
 
 
 
@@ -297,4 +327,4 @@ function findue(){
     message_2.innerHTML = outputhtml_2;
 }
 
-    
+
