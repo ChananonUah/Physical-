@@ -1,44 +1,3 @@
-// unit_all = {'p':10**-12, 'n':10**-9, 'mi':10**-6,
-//             'm':10**-3, 'c':10**-2, 'd':10**-1,
-//             'da':10**1, 'h':10**2, 'k':10**3, 
-//             'M':10**6, 'G':10**9, 'T':10**12, 
-//             }
-
-// // ตัวอย่าง 10 nm 10 cm
-// // ถ้าเป็น micro ให้ใส่เป็น mi
-// unit_input = '200 nm'
-// unit_ans = 'cm'
-
-// unit_array = unit_input.split(" ")
-
-// unit_need = unit_array[1].substring(0, unit_array[1].length - 1)
-
-// for (const key in unit_all) {
-//     if (key == unit_need || key == unit_ans) {
-//         ans = parseInt(unit_array[0])*unit_all[key]
-//     }    
-// }
-
-// function formatExponent(num) {
-//     // แปลงเลขเป็นสตริงในรูปแบบเลขยกกำลังฐาน 10
-//     let exponentString = num.toExponential();
-
-//     // แยกส่วนฐานและเลขชี้กำลัง
-//     let [base, exponent] = exponentString.split('e');
-
-//     // แปลงเลขชี้กำลังเป็นจำนวนเต็ม
-//     exponent = parseInt(exponent, 10);
-
-//     return [parseFloat(base), exponent];
-// }
-
-// document.getElementById('show_unit').innerHTML = `<p>หน่วยที่ได้ ${formatExponent(ans)[0]}× 10<sup>${formatExponent(ans)[1]}</sup> ${unit_ans}<p>`
-
-
-
-
-
-
 let nums = document.getElementById('se')
 let numv = document.getElementById('ve')
 let numt = document.getElementById('te')
@@ -47,17 +6,12 @@ let t = document.getElementById('t1')
 let s = document.getElementById('s1')
 let message = document.getElementById('result')
 
-
-
-
 function finds(){
     v.style.display = 'block';
     t.style.display = 'block';
     document.getElementById('but2').style.display = 'none';
     document.getElementById('but3').style.display = 'none';
     document.getElementById('but1').style.display = 'none';
-
-
 }
 
 function findv(){
@@ -67,7 +21,6 @@ function findv(){
     document.getElementById('but3').style.display = 'none';
     document.getElementById('but1').style.display = 'none';
 
-
 }
 function findt(){
     s.style.display = 'block';
@@ -76,7 +29,6 @@ function findt(){
     document.getElementById('but3').style.display = 'none';
     document.getElementById('but1').style.display = 'none';
 
-
 }
 
 function showmessage() {
@@ -84,7 +36,6 @@ function showmessage() {
     let numberv = Number(numv.value);
     let numbert = Number(numt.value);
     let outputhtml = ''
-
 
     if (numbers >=1 && numberv >=1){
         outputhtml += 't = '
@@ -117,9 +68,7 @@ function showmessage() {
     }
 
     message.innerHTML = outputhtml;
-
 }
-
 function reset_one() {
     document.getElementById('ve').value = "";
     document.getElementById('se').value = "";
@@ -136,15 +85,6 @@ function reset_one() {
 
 
 }
-
-
-
-
-
-
-
-
-
 
 let message_2 = document.getElementById("resulttwo")
 let srv = document.getElementById("sre")
@@ -168,9 +108,6 @@ function nos(){
     document.getElementById('but-5').style.display = 'none';
     document.getElementById('but-1').style.display = 'none';
     document.getElementById('resultv').style.display = 'none';
-
-
-    
 }
 
 function nov(){
@@ -342,8 +279,6 @@ function findue(){
     message_2.innerHTML = outputhtml_2;
 }
 
-
-
 let message_1 = document.getElementById('result-1');
 
 const unit_all = {'p':10**-12, 'n':10**-9, 'mi':10**-6,
@@ -402,7 +337,7 @@ function result_1() {
 function reset_1(){
     document.getElementById('change1').value ="";
     document.getElementById('change2').value ="";
-    message_1.innerHTML = `<p class="result" id="result-1">เเสดงคำตอบที่นี่</p>`;
+    message_1.innerHTML = `เเสดงคำตอบที่นี่`;
     
 }
     
