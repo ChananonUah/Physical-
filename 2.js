@@ -297,6 +297,7 @@ function findue(){
     message_2.innerHTML = outputhtml_2;
 }
 
+    
 let message_1 = document.getElementById('result-1');
 
 const unit_all = {'p':10**-12, 'n':10**-9, 'mi':10**-6,
@@ -319,10 +320,10 @@ function result_1() {
 
     for (const key in unit_all) {
         if (key == unit_need) {
-            ans = ans*(1/unit_all[key])
+            ans = ans*(unit_all[key])
         }    
         if (key == unit_ans1) {
-            ans = ans*(unit_all[key])
+            ans = ans*(1/unit_all[key])
         }
     }
     
