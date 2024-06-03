@@ -7,6 +7,11 @@
     
 }
 
+html{
+    height: 100%;
+    width: 100%;
+}
+
 header{
     display: block;
     unicode-bidi: isolate;
@@ -125,25 +130,53 @@ header{
 }
 
 
-@media only screen and (max-width: 750px){
+@media only screen and (max-width: 500px){
     .head-top{
         background-color: rgb(250, 167, 12);
-        min-width: 800px;
+        width: 100%;
+        min-width: 400px;
     }
 
+
+
     .boxbig{
-        min-width: 800px;
+        width: 100%;
     }
+
+
     .box{
         margin: auto;
         margin-top: 4rem;
         margin-bottom: 5rem;
+        width: 400px;
+
+ 
+    }
+}
+@media screen and (max-width:800px)and(min-width:510px){
+    .head-top{
+        background-color: rgb(250, 167, 12);
+        width: 100%;
+        min-width: 510px;
     }
 
 
 
-   
+    .boxbig{
+        min-width: 700px;
+    }
+
+
+    .box{
+        margin: auto;
+        margin-top: 4rem;
+        margin-bottom: 5rem;
+        width: 510px;
+
+    }
+    
 }
+
 
 button{
     margin: 5px;
