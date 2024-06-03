@@ -1,10 +1,13 @@
-let nums = document.getElementById('se')
-let numv = document.getElementById('ve')
-let numt = document.getElementById('te')
-let v = document.getElementById('v1')
-let t = document.getElementById('t1')
-let s = document.getElementById('s1')
-let message = document.getElementById('result')
+let nums = document.getElementById('se');
+let numv = document.getElementById('ve');
+let numt = document.getElementById('te');
+let v = document.getElementById('v1');
+let t = document.getElementById('t1');
+let s = document.getElementById('s1');
+let message = document.getElementById('result');
+
+
+
 
 function finds(){
     v.style.display = 'block';
@@ -12,6 +15,8 @@ function finds(){
     document.getElementById('but2').style.display = 'none';
     document.getElementById('but3').style.display = 'none';
     document.getElementById('but1').style.display = 'none';
+
+
 }
 
 function findv(){
@@ -21,6 +26,7 @@ function findv(){
     document.getElementById('but3').style.display = 'none';
     document.getElementById('but1').style.display = 'none';
 
+
 }
 function findt(){
     s.style.display = 'block';
@@ -28,6 +34,7 @@ function findt(){
     document.getElementById('but2').style.display = 'none';
     document.getElementById('but3').style.display = 'none';
     document.getElementById('but1').style.display = 'none';
+
 
 }
 
@@ -37,10 +44,11 @@ function showmessage() {
     let numbert = Number(numt.value);
     let outputhtml = ''
 
+
     if (numbers >=1 && numberv >=1){
         outputhtml += 't = '
         outputhtml += numbers/numberv;
-        outputhtml += ' s'
+        outputhtml += 's'
 
         if (outputhtml < 0){
             outputhtml = 'หาค่าไม่ได้'
@@ -50,7 +58,7 @@ function showmessage() {
     else if (numbers >=1 && numbert >=1){
         outputhtml += 'v = '
         outputhtml += numbers/numbert;
-        outputhtml += ' m/s'
+        outputhtml += 'm/s'
         if (outputhtml < 0){
             outputhtml = 'หาค่าไม่ได้'
          }
@@ -58,7 +66,7 @@ function showmessage() {
     else if(numberv >=1 && numbert >=1){
         outputhtml += 's = '
         outputhtml += numberv*numbert;
-        outputhtml += ' m'
+        outputhtml += 'm'
         if (outputhtml < 0){
             outputhtml = 'หาค่าไม่ได้'
          }
@@ -68,7 +76,9 @@ function showmessage() {
     }
 
     message.innerHTML = outputhtml;
+
 }
+
 function reset_one() {
     document.getElementById('ve').value = "";
     document.getElementById('se').value = "";
@@ -85,6 +95,16 @@ function reset_one() {
 
 
 }
+
+
+
+
+
+
+
+
+
+
 
 let message_2 = document.getElementById("resulttwo")
 let srv = document.getElementById("sre")
@@ -108,6 +128,9 @@ function nos(){
     document.getElementById('but-5').style.display = 'none';
     document.getElementById('but-1').style.display = 'none';
     document.getElementById('resultv').style.display = 'none';
+
+
+    
 }
 
 function nov(){
@@ -196,7 +219,7 @@ function findse(){
             outputhtml_2 += "s = ";
             outputhtml_2 += (urv*trv) + (1/2*arv*(trv**2));
         }
-        outputhtml_2 += " m"
+        outputhtml_2 += "m"
         
     }
     message_2.innerHTML = outputhtml_2;
@@ -237,7 +260,7 @@ function findve(){
             outputhtml_2 += "v = ";
             outputhtml_2 += urv + (arv * trv);
         }
-        outputhtml_2 += " m/s"
+        outputhtml_2 += "m/s"
         
     }
     message_2.innerHTML = outputhtml_2;
@@ -279,67 +302,162 @@ function findue(){
     message_2.innerHTML = outputhtml_2;
 }
 
-let message_1 = document.getElementById('result-1');
+function findae(){
+    let outputhtml_2 = "";
+    let message_2 = document.getElementById("resulttwo");
 
-const unit_all = {'p':10**-12, 'n':10**-9, 'mi':10**-6,
-            'm':10**-3, 'c':10**-2, 'd':10**-1,
-            'da':10**1, 'h':10**2, 'k':10**3, 
-            'M':10**6, 'G':10**9, 'T':10**12, 
-            }
-
-// ตัวอย่าง 10 nm 10 cm
-// ถ้าเป็น micro ให้ใส่เป็น mi
-function result_1() {
-    let unit_input = document.getElementById('change1').value;
-    let unit_ans = document.getElementById('change2').value;
     
-    unit_array = unit_input.split(" ");
-    
-    unit_need = unit_array[1].substring(0, unit_array[1].length - 1);
-    let unit_ans1 = unit_ans.substring(0, unit_ans.length - 1);
-    let ans = parseInt(unit_array[0])
+    let srv = parseFloat(document.getElementById("sre").value);
+    let vrv = parseFloat(document.getElementById("vre").value);
+    let urv = parseFloat(document.getElementById("ure").value);
+    let arv = parseFloat(document.getElementById("are").value);
+    let trv = parseFloat(document.getElementById("tre").value);
 
-    for (const key in unit_all) {
-        if (key == unit_need) {
-            ans = ans*(unit_all[key])
-        }    
-        if (key == unit_ans1) {
-            ans = ans*(1/unit_all[key])
-        }
+    if (isNaN(srv)){
+        outputhtml_2 += "a = ";
+        outputhtml_2 += (vrv-urv) /trv;
+    }
+    else if (isNaN(vrv)){
+        outputhtml_2 += "a = ";
+        outputhtml_2 += ((srv - (urv*trv))*2) / (trv**2);
+    }
+    else if (isNaN(urv)){
+        outputhtml_2 += "a = ";
+        outputhtml_2 +=  -(((srv - (vrv*trv))*2) / (trv**2));
+    }
+    else if (isNaN(trv)){
+        outputhtml_2 += "a = ";
+        outputhtml_2 += ((vrv**2) - (urv**2)) / (2*srv);
+    }
+    else{
+        outputhtml_2 += "a = ";
+        outputhtml_2 += (vrv-urv) /trv;
     }
     
-    function formatExponent(num) {
-        // แปลงเลขเป็นสตริงในรูปแบบเลขยกกำลังฐาน 10
-        let exponentString = num.toExponential();
-    
-        // แยกส่วนฐานและเลขชี้กำลัง
-        let [base, exponent] = exponentString.split('e');
-    
-        // แปลงเลขชี้กำลังเป็นจำนวนเต็ม
-        exponent = parseInt(exponent, 10);
-    
-        return [parseFloat(base), exponent];
-    }
+    outputhtml_2 += "  เมตรกำลัง2"
 
-    function roundToTwoDecimalPlaces(number) {
-    return Math.round(number * 100) / 100;
-    }
+    message_2.innerHTML = outputhtml_2;
 
-    if (formatExponent(ans)[1] == 0) {
-        message_1.innerHTML = `<p>หน่วยที่ได้ ${roundToTwoDecimalPlaces(formatExponent(ans)[0])}</p>`;
-    }
-    else {
-        message_1.innerHTML = `<p>หน่วยที่ได้ ${roundToTwoDecimalPlaces(formatExponent(ans)[0])}× 
-                            10<sup>${formatExponent(ans)[1]}</sup> ${unit_ans}</p>`;
-    }
 }
 
-function reset_1(){
-    document.getElementById('change1').value ="";
-    document.getElementById('change2').value ="";
-    message_1.innerHTML = `เเสดงคำตอบที่นี่`;
+
+function findte(){
+    let outputhtml_2 = "";
+    let message_2 = document.getElementById("resulttwo");
+
+    
+    let srv = parseFloat(document.getElementById("sre").value);
+    let vrv = parseFloat(document.getElementById("vre").value);
+    let urv = parseFloat(document.getElementById("ure").value);
+    let arv = parseFloat(document.getElementById("are").value);
+    let trv = parseFloat(document.getElementById("tre").value);
+
+    if (isNaN(srv)){
+        outputhtml_2 += "t = ";
+        outputhtml_2 += (vrv - urv) / arv ;
+    }
+    else if (isNaN(vrv)){
+        outputhtml_2 += "t = ";
+        let number1= ((-urv) + ((urv**2) - ((4*(arv/2)*srv))**0.5)) / (2*srv); 
+        outputhtml_2 += number1.toFixed(2);
+        outputhtml_2 += "    and    ";
+        let number2 = ((-urv) - ((urv**2) - ((4*(arv/2)*srv))**0.5)) / (2*srv);
+        outputhtml_2 += number2.toFixed(2);
+    }
+    else if(isNaN(urv)){
+        outputhtml_2 += "t = ";
+        let number1= ((-vrv) + ((vrv**2) - ((4*(-arv/2)*srv))**0.5)) / (2*srv); 
+        outputhtml_2 += number1.toFixed(2);
+        outputhtml_2 += "    and    ";
+        let number2 = ((-vrv) - ((vrv**2) - ((4*(-arv/2)*srv))**0.5)) / (2*srv);
+        outputhtml_2 += number2.toFixed(2);
+    }
+    else if(isNaN(arv)){
+        outputhtml_2 += "t = ";
+        let number2 = srv*2 / ((urv+vrv));
+        outputhtml_2 += number2.toFixed(2);
+
+    }
+    else{
+        outputhtml_2 += "t = ";
+        let number2 = srv*2 / ((urv+vrv));
+        outputhtml_2 += number2.toFixed(2);
+    }
+    outputhtml_2 += " s";
+
+    message_2.innerHTML = outputhtml_2;
+}
+
+
+
+
+
+
+function reset_2(){
+    document.getElementById('vre').value = "";
+    document.getElementById('sre').value = "";
+    document.getElementById('ure').value = "";
+    document.getElementById('are').value = "";
+    document.getElementById('tre').value = "";
+
+
+    document.getElementById('sr').style.display = "none";
+    document.getElementById('ur').style.display = "none";
+    document.getElementById('vr').style.display = "none";
+    document.getElementById('tr').style.display = "none";
+    document.getElementById('ar').style.display = "none";
+
+    document.getElementById('but-2').style.display = 'inline-block';
+    document.getElementById('but-3').style.display = 'inline-block';
+    document.getElementById('but-4').style.display = 'inline-block';
+    document.getElementById('but-5').style.display = 'inline-block';
+    document.getElementById('but-1').style.display = 'inline-block';
+
+    document.getElementById('results').style.display = 'none';
+    document.getElementById('resultv').style.display = 'none';
+    document.getElementById('resultu').style.display = 'none';
+    document.getElementById('resulta').style.display = 'none';
+    document.getElementById('resultt').style.display = 'none';
+
+
+
+
+    outputhtml_2 = "";
+    outputhtml_2 += "เเสดงคำตอบที่นี่"
+    message_2.innerHTML = outputhtml_2;
+}
+
+
+
+
+
+function result_5() {
+    const prefixs = {
+        y: 10 * (-24), z: 10 * (-21), a: 10 * (-18), f: 10 * (-15), p: 10 * (-12), n: 10 * (-9), 
+        μ: 10 * (-6), m: 10 * (-3), c: 10 * (-2), d: 10 * (-1), 
+        Y: 10 * 24, Z: 10 * 21, E: 10 * 18, P: 10 * 15, T: 10 * 12, G: 10 * 9, M: 10 * 6, k: 10 * 3, h: 10 ** 2, da: 10, "": 1 
+    };
+    
+    let inputNum = document.getElementById('change1').value;
+    let inputPrefix = document.getElementById('change2').value;
+    let outputPrefix = document.getElementById('change3').value;
+    let output1 = document.getElementById('result-5');
+    
+    let outputNum = inputNum * (prefixs[inputPrefix]) / (prefixs[outputPrefix]);
+    let sciNotationArray = outputNum.toExponential(3).toString().split("e");
+    let outputText = (sciNotationArray[0] + " × 10^" + sciNotationArray[1]).replace("+", "");
+    
+    output1.innerHTML = outputText;
+}
+
+
+function reset2(){
+    document.getElementById('change1').value = "";
+    document.getElementById('change2').value = "";
+    document.getElementById('change3').value = "";
+    let output1 = document.getElementById('result-5');
+
+    outputText = "เเสดงคำตอบที่นี่";
+    output1.innerHTML = outputText;
     
 }
-    
-
-
