@@ -29,6 +29,8 @@ header{
     font-weight: 400;
 }
 
+
+
 .box{
     box-shadow: 10px 10px 20px 6px rgba(0, 0, 0, 1.5);
     border-radius: 15px;
@@ -43,8 +45,10 @@ header{
     padding-bottom: 15px;
     border-radius: 35px;
     color: #000;
-    width: 700px;
-    max-width: 800px;
+    width: 800px;
+   
+    
+
     
 }
 
@@ -56,11 +60,11 @@ header{
 
 .box h2{
     font-family: "Kanit", sans-serif;
+    
 }
-
 .in{
     
-    width: 150px;
+    width: 100px;
     border-radius: 5px;
 
 }
@@ -98,20 +102,7 @@ header{
     font-size: .7rem;
 }
 
-#v1{
-    
-    display: none;
-   
-}
 
-#s1{
-    
-    display: none;
-}
-
-#t1{
-    display: none;
-}
 
 .button-1{
     background-image: linear-gradient(90deg, rgb(132, 250, 102) 0%, rgba(255, 223, 30, 1) 62%);
@@ -134,7 +125,7 @@ header{
     .head-top{
         background-color: rgb(250, 167, 12);
         width: 100%;
-        min-width: 400px;
+        min-width: 350px;
     }
 
 
@@ -148,36 +139,32 @@ header{
         margin: auto;
         margin-top: 4rem;
         margin-bottom: 5rem;
-        width: 400px;
+
+        max-width: 300px;
+        
 
  
     }
 }
-@media screen and (max-width:800px)and(min-width:510px){
-    .head-top{
-        background-color: rgb(250, 167, 12);
-        width: 100%;
-        min-width: 510px;
-    }
-
-
-
-    .boxbig{
-        min-width: 700px;
-    }
-
-
-    .box{
-        margin: auto;
-        margin-top: 4rem;
-        margin-bottom: 5rem;
-        width: 510px;
-
-    }
+@media screen and (max-width:1500px)and(min-width:800px){
+    
     
 }
 
 
+
+
 button{
     margin: 5px;
+}
+
+.re:hover{
+    border-radius: 15px;
+    color: #fff;
+    border: solid 2px red;
+}
+
+.reset:hover{
+    color: #fff;
+    border: solid 2px red;
 }
