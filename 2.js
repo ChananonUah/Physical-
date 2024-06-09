@@ -9,71 +9,56 @@ let message = document.getElementById('result');
 
 
 
-function finds(){
-    v.style.display = 'block';
-    t.style.display = 'block';
-    document.getElementById('but2').style.display = 'none';
-    document.getElementById('but3').style.display = 'none';
-    document.getElementById('but1').style.display = 'none';
 
-
-}
-
-function findv(){
-    s.style.display = 'block';
-    t.style.display = 'block';
-    document.getElementById('but2').style.display = 'none';
-    document.getElementById('but3').style.display = 'none';
-    document.getElementById('but1').style.display = 'none';
-
-
-}
-function findt(){
-    s.style.display = 'block';
-    v.style.display = 'block';
-    document.getElementById('but2').style.display = 'none';
-    document.getElementById('but3').style.display = 'none';
-    document.getElementById('but1').style.display = 'none';
-
-
-}
 
 function showmessage() {
-    let numbers = Number(nums.value);
-    let numberv = Number(numv.value);
-    let numbert = Number(numt.value);
+    let numbers = parseFloat(document.getElementById("se").value)
+    let numberv = parseFloat(document.getElementById("ve").value)
+    let numbert = parseFloat(document.getElementById("te").value)
+
     let outputhtml = ''
 
 
-    if (numbers >=1 && numberv >=1){
+    if (isNaN(numbert)){
         outputhtml += 't = '
-        outputhtml += numbers/numberv;
-        outputhtml += 's'
+        let num5 = numbers/numberv;
+        outputhtml += num5.toFixed(2);
+        outputhtml += "s";
+
+        
+
+        
 
         if (outputhtml < 0){
-            outputhtml = 'หาค่าไม่ได้'
+            num5 = 'หาค่าไม่ได้'
         }
         
     }
-    else if (numbers >=1 && numbert >=1){
+    else if (isNaN(numberv)){
         outputhtml += 'v = '
-        outputhtml += numbers/numbert;
+        let num5 = numbers/numbert;
+        outputhtml += num5.toFixed(2);
         outputhtml += 'm/s'
+
+        outputhtml += "         หรือ        "
+        let num4 = num5*(18/5);
+        outputhtml += num4.toFixed(2);
+        outputhtml += "km/hr"
+
         if (outputhtml < 0){
             outputhtml = 'หาค่าไม่ได้'
          }
     }
-    else if(numberv >=1 && numbert >=1){
+    else if(isNaN(numbers)){
         outputhtml += 's = '
-        outputhtml += numberv*numbert;
+        let num5= numberv*numbert;
+        outputhtml += num5.toFixed(2);
         outputhtml += 'm'
         if (outputhtml < 0){
             outputhtml = 'หาค่าไม่ได้'
          }
     }
-    else{
-        outputhtml = 'หาค่าไม่ได้'
-    }
+
 
     message.innerHTML = outputhtml;
 
@@ -85,14 +70,6 @@ function reset_one() {
     document.getElementById('te').value = "";
     outputhtml = "เเสดงคำตอบที่นี่"
     message.innerHTML = outputhtml;
-    s.style.display = 'none';
-    v.style.display = 'none';
-    t.style.display = 'none';
-
-    document.getElementById('but2').style.display = 'inline-block';
-    document.getElementById('but1').style.display = 'inline-block';
-    document.getElementById('but3').style.display = 'inline-block';
-
 
 }
 
@@ -200,24 +177,30 @@ function findse(){
         
         if (isNaN(vrv)){
             outputhtml_2 += "s = ";
-            outputhtml_2 += (urv*trv) + (1/2*arv*(trv**2));
+            let num1= (urv*trv) + (1/2*arv*(trv**2));
+            outputhtml_2 += num1.toFixed(2);
             
         }
         else if (isNaN(urv)){
             outputhtml_2 += "s = ";
-            outputhtml_2 = (vrv*trv) - (1/2*arv*(trv**2));
+            let num1 = (vrv*trv) - (1/2*arv*(trv**2));
+            outputhtml_2 += num1.toFixed(2);
         }
         else if(isNaN(arv)){
             outputhtml_2 += "s = ";
-            outputhtml_2 += ((urv+vrv)/2)*trv;
+            let num1 = ((urv+vrv)/2)*trv;
+            outputhtml_2 += num1.toFixed(2);
+
         }
         else if(isNaN(trv)){
             outputhtml_2 += "s = ";
-            outputhtml_2 += ((vrv**2)-(urv**2)) / (2*arv);
+            let num1 = ((vrv**2)-(urv**2)) / (2*arv);
+            outputhtml_2 += num1.toFixed(2);
         }
         else{
             outputhtml_2 += "s = ";
-            outputhtml_2 += (urv*trv) + (1/2*arv*(trv**2));
+            let num1 = (urv*trv) + (1/2*arv*(trv**2));
+            outputhtml_2 += num1.toFixed(2);
         }
         outputhtml_2 += "m"
         
@@ -241,24 +224,29 @@ function findve(){
       
         if (isNaN(srv)){
             outputhtml_2 += "v = ";
-            outputhtml_2 += urv + (arv * trv); 
+            let num1= urv + (arv * trv); 
+            outputhtml_2 *= num1.toFixed(2);
         }
         else if(isNaN(urv)){
             outputhtml_2 += "v = ";
-            outputhtml_2 += (srv + 1/2*arv*(trv**2)) / trv;
+            let num1= (srv + 1/2*arv*(trv**2)) / trv;
+            outputhtml_2 += num1.toFixed(2);
             
         }
         else if(isNaN(arv)){
             outputhtml_2 += "v = ";
-            outputhtml_2 += ((srv/trv)*2)-urv;
+            let num1 = ((srv/trv)*2)-urv;
+            outputhtml_2 += num1.toFixed(2);
         }
         else if(isNaN(trv)){
             outputhtml_2 += "v = ";
-            outputhtml_2 += ((urv**2)+(2*arv*srv))**0.5;
+            let num1 = ((urv**2)+(2*arv*srv))**0.5;
+            outputhtml_2 += num1.toFixed(2);
         }
         else{
             outputhtml_2 += "v = ";
-            outputhtml_2 += urv + (arv * trv);
+            let num1 = urv + (arv * trv);
+            outputhtml_2 += num1.toFixed(2);
         }
         outputhtml_2 += "m/s"
         
@@ -283,19 +271,24 @@ function findue(){
     }
     else if (isNaN(vrv)){
         outputhtml_2 += "u = ";
-        outputhtml_2 += (srv - (1/2*arv*(trv**2))) / trv;
+        let num1 = (srv - (1/2*arv*(trv**2))) / trv;
+        outputhtml_2 += num1.toFixed(2);
+
     }
     else if (isNaN(srv)){
         outputhtml_2 += "u = ";
-        outputhtml_2 += ((srv/trv)*2) - vrv;
+        let num1= ((srv/trv)*2) - vrv;
+        outputhtml_2 += num1.toFixed(2);
     }
     else if (isNaN(trv)){
         outputhtml_2 += "u = ";
-        outputhtml_2 += ((vrv**2) - (2*arv*srv))**0.5;
+        let num1 = ((vrv**2) - (2*arv*srv))**0.5;
+        outputhtml_2 += num1.toFixed(2);
     }
     else{
         outputhtml_2 += "u = "
-        outputhtml_2 += ((vrv**2) - (2*arv*srv))**0.5;
+        let num1 = ((vrv**2) - (2*arv*srv))**0.5;
+        outputhtml_2 += num1.toFixed(2);
     }
     outputhtml_2 += "m/s"
 
@@ -315,26 +308,31 @@ function findae(){
 
     if (isNaN(srv)){
         outputhtml_2 += "a = ";
-        outputhtml_2 += (vrv-urv) /trv;
+        let num1 = (vrv-urv) /trv;
+        outputhtml_2 += num1.toFixed(2);
     }
     else if (isNaN(vrv)){
         outputhtml_2 += "a = ";
-        outputhtml_2 += ((srv - (urv*trv))*2) / (trv**2);
+        let num1= ((srv - (urv*trv))*2) / (trv**2);
+        outputhtml_2 += num1.toFixed(2);
     }
     else if (isNaN(urv)){
         outputhtml_2 += "a = ";
-        outputhtml_2 +=  -(((srv - (vrv*trv))*2) / (trv**2));
+        let num1=  -(((srv - (vrv*trv))*2) / (trv**2));
+        outputhtml_2 += num1.toFixed(2);
     }
     else if (isNaN(trv)){
         outputhtml_2 += "a = ";
-        outputhtml_2 += ((vrv**2) - (urv**2)) / (2*srv);
+        let num1= ((vrv**2) - (urv**2)) / (2*srv);
+        outputhtml_2 += num1.toFixed(2);
     }
     else{
         outputhtml_2 += "a = ";
-        outputhtml_2 += (vrv-urv) /trv;
+        let num1= (vrv-urv) /trv;
+        outputhtml_2 += num1.toFixed(2);
     }
     
-    outputhtml_2 += "  เมตรกำลัง2"
+    outputhtml_2 += "  m/s<sup>2</sup>";
 
     message_2.innerHTML = outputhtml_2;
 
@@ -354,7 +352,8 @@ function findte(){
 
     if (isNaN(srv)){
         outputhtml_2 += "t = ";
-        outputhtml_2 += (vrv - urv) / arv ;
+        let number2 = (vrv - urv) / arv ;
+        outputhtml_2 += number2.toFixed(2);
     }
     else if (isNaN(vrv)){
         outputhtml_2 += "t = ";
@@ -444,8 +443,8 @@ function result_5() {
     let output1 = document.getElementById('result-5');
     
     let outputNum = inputNum * (prefixs[inputPrefix]) / (prefixs[outputPrefix]);
-    let sciNotationArray = outputNum.toExponential(3).toString().split("e");
-    let outputText = (sciNotationArray[0] + " × 10^" + sciNotationArray[1]).replace("+", "");
+    let sciNotationArray = outputNum.toExponential(2).toString().split("e");
+    let outputText = (sciNotationArray[0] + " × 10^" + sciNotationArray[1]).replace("+", "") + "    "+outputPrefix + "m" + "        หรือ    "  + outputNum + outputPrefix + "m";
     
     output1.innerHTML = outputText;
 }
