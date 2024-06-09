@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,22 +27,22 @@
                 <p id="v1">
                    <span>v</span>
                    <span><input type="number" class="in v" id="ve">หน่วย m/s</span>
+                   
                 </p>
     
                 <p id="s1">
                     <span>s</span>
                     <span><input type="number" class="in s" id="se">หน่วย m</span>
+                    
                 </p>
     
                 <p id="t1">
                     <span>t</span>
                     <span><input type="number" class="in a" id="te">หน่วย s</span>
+                    
                 </p>
     
-                <button onclick="finds();" class="button-1" id="but1">หา s</button>
-                <button onclick="findv()"  class="button-1" id="but2">หา v</button>
-                <button onclick="findt()"  class="button-1" id="but3">หา t</button>
-    
+
     
                 <button class="re ae" onclick="showmessage();">Result</button>
                 <button id="reset" class="reset" onclick="reset_one();" value="Reset">Reset</button>
@@ -51,6 +52,10 @@
     
             </div>
         </div>
+
+
+
+        
 
         
 
@@ -77,17 +82,10 @@
                 <button class="re ae" onclick=" result_5();">Result</button>
                 <button class="reset" onclick="reset2();">Reset</button>
     
-                <p class="result" id="result-5">เเสดงคำตอบที่นี่</p>
+                <p class="result" id="result-5">ถ้าต้องเเปลงหน่วยเป็นเมตรไม่ต้องใส่ ที่หน่วยใหม่</p>
     
             </div>
         </div>
-
-
-
-
-
-
-
 
         <div class="boxbig">
             <div class="box box-3">
@@ -95,23 +93,23 @@
 
                 <p style="display: none;" id="sr">
                     s=
-                    <input type="number" id="sre" >m
+                    <input type="number" id="sre" style="width: 150px;" >m
                 </p>
                 <p style="display: none;" id="vr">
                     v=
-                    <input type="number" id="vre">m/s
+                    <input type="number" id="vre" style="width: 150px;">m/s
                 </p>
                 <p style="display: none;" id="ur">
                     u=
-                    <input type="number" id="ure">m/s
+                    <input type="number" id="ure" style="width: 150px;">m/s
                 </p>
                 <p style="display: none;" id="ar">
                     a=
-                    <input type="number" id="are">m/s<sup>2</sup>
+                    <input type="number" id="are" style="width: 150px;">m/s<sup>2</sup>
                 </p>
                 <p style="display: none;" id="tr">
                     t=
-                    <input type="number" id="tre">s
+                    <input type="number" id="tre" style="width: 150px;">s
                 </p>
 
                 <button class="button-1" onclick="nos();" id="but-1">หาs</button>
@@ -131,6 +129,20 @@
                 <p class="result" id="resulttwo">เเสดงคำตอบที่นี่</p>
             </div>
         </div>
+        
+
+
+
+        <div class="div" style="height: 100px;"></div>
+
+
+
+
+
+
+
+
+       
         
         
    </header>
